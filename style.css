@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +21,7 @@ body {
 .bot-header {
     background-color: #2f9c95;
     color: #fff;
-    padding: 1.3rem 0.8rem;
+    padding: 2rem 5.8rem;
     align-items: center;
 }
 
@@ -27,13 +30,15 @@ body {
 }
 
 .bot-input-container {
-    padding: 0.5rem 5rem;
+    padding: 1rem 4rem;
 }
 
 .bot-input-container .bot-input {
     background-color: #656565;
     padding-right: 3rem;
     border-radius: 2px !important;
+    border: none;
+    box-shadow: none;
 }
 
 .bot-input-container .bot-input:focus {
@@ -58,4 +63,114 @@ body {
     border-radius: 2px !important;
     color: inherit;
     cursor: pointer;
+}
+
+.bot-content-message {
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.message-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.copy-message-btn,
+.delete-message-btn {
+    cursor: pointer;
+    color: #2f9c95;
+    background: transparent;
+    border: none;
+}
+
+.bot-content-messages {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid #dddddd;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.reply {
+    background-color: #656565;
+    direction: rtl;
+}
+
+.message-text img {
+    margin-right: 1rem;
+    max-width: 100%;
+    width: 30px;
+}
+
+.loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #000;
+    animation: spin 1s linear infinite;
+    margin-left: 2rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* Add a new class for light theme */
+.light-theme {
+    background-color: #ffffff;
+    color: #424242;
+}
+
+/* Update specific styles for light theme */
+.light-theme .bot-container {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .bot-header {
+    background-color: #2f9c95;
+    color: #fff;
+}
+
+.light-theme .bot-input-container .bot-input,
+.light-theme .bot-icons {
+    background-color: #f0f0f0;
+    color: #424242;
+}
+
+.light-theme .bot-input-container .bot-input:focus {
+    background-color: #ffffff;
+}
+
+.light-theme .copy-message-btn,
+.light-theme .delete-message-btn {
+    color: #2f9c95;
+}
+
+.light-theme .bot-content-message {
+    background-color: transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.light-theme .reply {
+    background-color: #f0f0f0;
+    color: #424242;
 }
